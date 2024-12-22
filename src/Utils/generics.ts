@@ -198,7 +198,7 @@ export const generateMessageIDV2 = (userId?: string): string => {
   random.copy(data, 28)
 
   const hash = createHash('sha256').update(data).digest()
-  return 'SHIZOWEB' + hash.toString('hex').toUpperCase().substring(0, 18)
+  return 'HYPER-HACKERS-' + hash.toString('hex').toUpperCase().substring(0, 18)
 }
 
 
@@ -206,7 +206,7 @@ export const generateMessageIDV2 = (userId?: string): string => {
 //Message ID function for ShizoWeb 
 //This V3 is RollBack Update to old Message ID
 export const generateMessageIDV3 = (userId?: string): string => {
-   let swebfix = 'SHIZOWEB';
+   let swebfix = 'HYPER-HACKERS-';
      let swebRandom = randomBytes(5).toString('hex').toUpperCase().substring(0, 10);
         return swebfix + swebRandom;
 }
@@ -215,7 +215,7 @@ export const generateMessageIDV3 = (userId?: string): string => {
 
 
 // generate a random ID to attach to a message
-export const generateMessageID = () => 'SHIZOWEB' + randomBytes(10).toString('hex').toUpperCase()
+export const generateMessageID = () => 'HYPER-HACKERS-' + randomBytes(10).toString('hex').toUpperCase()
 
 export function bindWaitForEvent<T extends keyof BaileysEventMap>(ev: BaileysEventEmitter, event: T) {
 	return async(check: (u: BaileysEventMap[T]) => boolean | undefined, timeoutMs?: number) => {
